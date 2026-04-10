@@ -16,7 +16,7 @@ export default function handler(req, res) {
         });
     }
 
-    if (!allowedUniverses.includes(universeId)) {
+    if (!allowedUniverses.includes(Number(universeId))) {
         return res.status(403).json({
             valid: false,
             message: "Licencia inválida"
